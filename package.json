@@ -20,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "rundevel": "concurrently --kill-others \"npm run start\" \"npm run backend\"",
-    "backend": "json-server --watch ../server/db.json --port 5000"
+    
+    "backend": "json-server --watch CADT-test/db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
