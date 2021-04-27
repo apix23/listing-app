@@ -1,17 +1,16 @@
-const convertNameIntoInitial = (name) => {
+export const convertNameIntoInitial = (name) => {
   const nameArray = name.split(" ");
   return nameArray[0].charAt(0) + nameArray[1].charAt(0);
 };
 
-const convertDateFormat = (list) => {
+export const convertDateFormat = (list) => {
   list.forEach((listItem) => {
     const baseDate = new Date(listItem.updated);
-    console.log(baseDate.toLocaleDateString("en-US"));
     listItem.updated = baseDate.toLocaleDateString("en-US");
   });
 };
 
-const getDataWithName = async (data) => {
+export const getDataWithName = async (data) => {
   const path = `http://localhost:5000/users`;
   const userInformation = await (await fetch(path)).json();
 
